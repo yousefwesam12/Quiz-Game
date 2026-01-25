@@ -3,16 +3,17 @@
 #include "clsScreen.h"
 #include "clsQuestion.h"
 #include "clsInputValidate.h"
+#include "clsString.h"
 
-class clsMathQuestionsScreen : protected clsScreen
+class clsProgrammingQuestionsScreen : protected clsScreen
 {
 
-    static void GenerateMathQuestion()
+    static void GenerateProgrammingQuestion()
     {
-    vector <clsQuestion> vMathQuestions = clsQuestion::GetQuestionList("MathQuestions.txt");
+    vector <clsQuestion> vProgrammingQuestions = clsQuestion::GetQuestionList("ProgrammingQuestions.txt");
     int Counter = 1;
 
-    for (clsQuestion &Question : vMathQuestions)
+    for (clsQuestion &Question : vProgrammingQuestions)
     {
         string PlayerAnswer = "";
 
@@ -42,9 +43,9 @@ class clsMathQuestionsScreen : protected clsScreen
 }
 
     public:
-    static void ShowMathQuestionsScreen()
+    static void ShowProgrammingQuestionsScreen()
     {
-        DrawScreenHeader("\tMath Questions Screen");
-        GenerateMathQuestion();
+        DrawScreenHeader("\tProgramming Questions Screen");
+        GenerateProgrammingQuestion();
     }
 };

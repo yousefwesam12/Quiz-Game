@@ -8,7 +8,6 @@ using namespace std;
 class clsQuestion
 {
     private:
-    short  _QuestionReference;
     string _Question;
     string _QuestionAnswer;
     bool   _IsCorrectAnswer;
@@ -17,7 +16,7 @@ class clsQuestion
     {
         vector <string> vQuestion = clsString::Split(Line,Sep);
 
-        return clsQuestion(vQuestion[0],stoi(vQuestion[1]));
+        return clsQuestion(vQuestion[0],vQuestion[1]);
     }
 
     static vector <clsQuestion> _LoadQuestionsFromTheDatabase(string Filename, string Sep = "#//#")
@@ -42,41 +41,11 @@ class clsQuestion
         return vQuestions;
     }
 
-    static string _GetQuestionAnswer(string AnswersFileName,short QuestionReference)
-    {        
-        fstream MyFile;
-        MyFile.open(AnswersFileName,ios::in);
-        string Answer = "";
-
-        if(MyFile.is_open())
-        {
-
-            int Counter = 1;
-
-            string Line;
-
-            while(getline(MyFile,Line))
-            {
-                if(Counter == QuestionReference)
-                {
-                    Answer = Line;
-                }
-
-                Counter++;
-            }
-
-            MyFile.close();
-        }
-        return Answer;
-
-        
-    }
-
     public:
-    clsQuestion(string Question,short QuestionReference)
+    clsQuestion(string Question,string QuestionAnswer)
     {
         this->_Question = Question;
-        this->_QuestionReference = QuestionReference;
+        this->_QuestionAnswer = QuestionAnswer;
     }
     void SetQuestion(string Question)
     {
@@ -85,14 +54,6 @@ class clsQuestion
     string GetQuestion()
     {
         return this->_Question;
-    }
-    void SetQuestionReference(short QuestionReference)
-    {
-        this->_QuestionReference =  QuestionReference;
-    }
-    short GetQuestionReference()
-    {
-        return this->_QuestionReference;
     }
     void SetQuestionAnswer(string QuestionAnswer)
     {
@@ -114,10 +75,5 @@ class clsQuestion
     {
         return _LoadQuestionsFromTheDatabase(FileName);
     }
-    static string GetQuestionAnswer(string FileName, short QuestionReference)
-    {
-        return _GetQuestionAnswer(FileName,QuestionReference);
-    }
-    
 
 };

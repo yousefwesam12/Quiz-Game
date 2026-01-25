@@ -25,16 +25,16 @@ class clsScreen
     static void DrawQuestionHeader(string Question,short QuestionNum)
     {
         cout << "\n----------------------------------------------------------";
-        cout << "\n" << "Question No." << QuestionNum << " : " << Question;
+        cout << "\n" << "Question No." << QuestionNum << " : \n" << Question;
         cout << "\n----------------------------------------------------------\n";
     }
     static void ShowWrongAnswerMessage()
     {
-         cout << "\n" <<"Your answer is not right , try again: ";
+         cout << "\n" <<"Your answer is ❌ , try again: ";
     }
     static void ShowCorrectAnswerMessage()
     {
-         cout << "\n" << "Right Answer, Go on !!\n";
+         cout << "\n" << "Right Answer ✅!!\n";
     }
     
   

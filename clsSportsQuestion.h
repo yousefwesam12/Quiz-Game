@@ -4,15 +4,15 @@
 #include "clsQuestion.h"
 #include "clsInputValidate.h"
 
-class clsMathQuestionsScreen : protected clsScreen
+class clsSportsQuestionsScreen : protected clsScreen
 {
 
-    static void GenerateMathQuestion()
+    static void GenerateSportsQuestion()
     {
-    vector <clsQuestion> vMathQuestions = clsQuestion::GetQuestionList("MathQuestions.txt");
+    vector <clsQuestion> vSportsQuestions = clsQuestion::GetQuestionList("SportsQuestions.txt");
     int Counter = 1;
 
-    for (clsQuestion &Question : vMathQuestions)
+    for (clsQuestion &Question : vSportsQuestions)
     {
         string PlayerAnswer = "";
 
@@ -42,9 +42,9 @@ class clsMathQuestionsScreen : protected clsScreen
 }
 
     public:
-    static void ShowMathQuestionsScreen()
+    static void ShowSportsQuestionsScreen()
     {
-        DrawScreenHeader("\tMath Questions Screen");
-        GenerateMathQuestion();
+        DrawScreenHeader("\tSports Questions Screen");
+        GenerateSportsQuestion();
     }
 };

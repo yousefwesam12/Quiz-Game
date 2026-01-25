@@ -1,0 +1,10 @@
+What language is used to style web pages? #//#css
+What language is used to structure web pages? #//#html
+What language is used for web programming? #//#javascript
+Which language is known for data science? #//#python
+What symbol ends a statement in C++? #//#semicolon
+Which loop runs while a condition is true? #//#while
+What keyword defines a function in Python? #//#def
+Which symbol is used for comments in Python? #//#hash
+What operator is used to add numbers? #//#plus
+What keyword is used to create a variable in JavaScript? #//#let

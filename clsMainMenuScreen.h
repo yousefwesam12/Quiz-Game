@@ -2,6 +2,10 @@
 #include "clsScreen.h"
 #include "clsInputValidate.h"
 #include "clsMathQuestion.h"
+#include "clsHistoryQuestion.h"
+#include "clsScienceQuestions.h"
+#include "clsProgrammingQuestions.h"
+#include "clsSportsQuestion.h"
 
 class clsMainMenueScreen : protected clsScreen
 {
@@ -9,7 +13,7 @@ class clsMainMenueScreen : protected clsScreen
     enum _enMainMenueChoices
     {
         eMath = 1, eHistory = 2, eScience = 3,
-        eProgramming = 4, eSports = 5, ePhysics = 6
+        eProgramming = 4, eSports = 5, eExit = 6
     };
 
     static short _ReadMainQuizChocie()
@@ -28,27 +32,30 @@ class clsMainMenueScreen : protected clsScreen
 
     static void _ShowHistoryQuestionsScreen()
     {
-        cout << "\n" << "History Questions Screen Will be here..\n";
+        //cout << "\n" << "History Questions Screen Will be here..\n";
+        clsHistoryQuestionsScreen::ShowHistoryQuestionsScreen();
     }
     
     static void _ShowScienceQuestionsScreen()
     {
-        cout << "\n" << "Science Questions Screen Will be here..\n";
+        //cout << "\n" << "Science Questions Screen Will be here..\n";
+        clsScienceQuestionsScreen::ShowScienceQuestionsScreen();
     }
      
     static void _ShowProgrammingQuestionsScreen()
     {
-        cout << "\n" << "Programming Questions Screen Will be here..\n";
+        //cout << "\n" << "Programming Questions Screen Will be here..\n";
+        clsProgrammingQuestionsScreen::ShowProgrammingQuestionsScreen();
     }
 
     static void _ShowSportsQuestionsScreen()
     {
-        cout << "\n" << "Sports Questions Screen Will be here..\n";
+        //cout << "\n" << "Sports Questions Screen Will be here..\n";
+        clsSportsQuestionsScreen::ShowSportsQuestionsScreen();
     }
-
-    static void _ShowPhysicsQuestionsScreen()
+    static void _ShowExitScreen()
     {
-        cout << "\n" << "Physics Questions Screen Will be here..\n";
+        cout << "\n" << "Exit Screen Will be here..\n";
     }
 
     static void _PerformMainMenueChoice(_enMainMenueChoices MainMenueChoice)
@@ -85,9 +92,9 @@ class clsMainMenueScreen : protected clsScreen
             _GoBackToMainMenue();
             break;
 
-            case ePhysics:
+            case eExit:
             ClearScreen();
-            _ShowPhysicsQuestionsScreen();
+            _ShowExitScreen();
             _GoBackToMainMenue();
             break;
         }
@@ -111,7 +118,7 @@ class clsMainMenueScreen : protected clsScreen
         cout << setw(38) << left << "" << "=======================================\n";
         cout << setw(38) << left << "" << "\t[1].Math           [2].History\n";
         cout << setw(38) << left << "" << "\t[3].Science        [4].Programming\n";
-        cout << setw(38) << left << "" << "\t[5].Sports         [6].Physics\n";
+        cout << setw(38) << left << "" << "\t[5].Sports         [6].Exit\n";
         cout << setw(38) << left << "" << "=======================================" << endl;
         _PerformMainMenueChoice(_enMainMenueChoices(_ReadMainQuizChocie()));
     }
