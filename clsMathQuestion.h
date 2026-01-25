@@ -11,6 +11,7 @@ class clsMathQuestionsScreen : protected clsScreen
     static void GenerateMathQuestion()
     {
     vector <clsQuestion> vMathQuestions = clsQuestion::GetQuestionList("MathQuestions.txt");
+    
     int Counter = 1;
 
     for (clsQuestion &Question : vMathQuestions)

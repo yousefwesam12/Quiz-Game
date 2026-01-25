@@ -3,6 +3,7 @@
 #include <fstream>
 #include <vector>
 #include "clsString.h"
+#include "clsUtil.h"
 using namespace std;
 
 class clsQuestion
@@ -11,6 +12,22 @@ class clsQuestion
     string _Question;
     string _QuestionAnswer;
     bool   _IsCorrectAnswer;
+
+    static void _SwapTwoObjects(clsQuestion &Q1,clsQuestion &Q2)
+    {
+        clsQuestion Temp = Q1;
+        Q1 = Q2;
+        Q2 = Temp;
+    }
+
+    static vector <clsQuestion> _ShuffleQuestionsList(vector <clsQuestion> &vQuestions)
+    {
+        for(int i =0; i<vQuestions.size();i++)
+        {
+            _SwapTwoObjects(vQuestions[clsUtil::RandomNumber(1,vQuestions.size())-1],vQuestions[clsUtil::RandomNumber(1,vQuestions.size())-1]);
+        }
+        return vQuestions;
+    }
 
     static clsQuestion _ConvertLineToQuestionObject(string Line,string Sep = "#//#")
     {
@@ -38,7 +55,7 @@ class clsQuestion
             MyFile.close();
         }
 
-        return vQuestions;
+        return _ShuffleQuestionsList(vQuestions);
     }
 
     public:

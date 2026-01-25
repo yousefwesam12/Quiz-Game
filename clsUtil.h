@@ -227,7 +227,7 @@ class clsUtil
         return NumberToText(Number/10000000) + " Billion " + NumberToText(Number%10000000);
     }
 
+
     }
-    
     
 };
