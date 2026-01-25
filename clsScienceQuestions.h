@@ -3,6 +3,7 @@
 #include "clsScreen.h"
 #include "clsQuestion.h"
 #include "clsInputValidate.h"
+#include "clsPlayer.h"
 
 class clsScienceQuestionsScreen : protected clsScreen
 {
@@ -14,20 +15,34 @@ class clsScienceQuestionsScreen : protected clsScreen
 
     for (clsQuestion &Question : vScienceQuestions)
     {
-        string PlayerAnswer = "";
+          clsPlayer Player("",0);
 
         DrawQuestionHeader(Question.GetQuestion(),Counter);
 
-        PlayerAnswer = clsInputValidate::ReadString();
+        Player.SetPlayerAnswer(clsInputValidate::ReadString());
 
-        while(!Question.IsCorrectAnswer(clsString::LowerAllString(PlayerAnswer)))
+        while(!Question.IsCorrectAnswer(clsString::LowerAllString(Player.GetPlayerAnswer())))
         {
+            Player.IncreasePlayerAttemptsByOne();
+
+            if(Player.IsMaxAttempts())
+            {
+                cout << "\nYour attempts has ended.";
+                cout << "\nThe answer was " << Question.GetQuestionAnswer() << endl;
+                break;
+            }
+
+            ShowAttemptsAvaliable(Player.GetPlayerAttempts());
             ShowWrongAnswerMessage();
-            PlayerAnswer = clsInputValidate::ReadString();
+            Player.SetPlayerAnswer(clsInputValidate::ReadString());
         }
 
-        ShowCorrectAnswerMessage();
+        if(Question.IsCorrectAnswer(clsString::LowerAllString(Player.GetPlayerAnswer())))
+        {   
+            ShowCorrectAnswerMessage();
+        }
         cout << "----------------------------------------------------------\n";
+      
 
         char answer = clsInputValidate::ReadChar("Do you want more questions? [Y/N]? ");
      

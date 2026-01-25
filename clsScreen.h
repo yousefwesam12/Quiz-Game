@@ -28,14 +28,22 @@ class clsScreen
         cout << "\n" << "Question No." << QuestionNum << " : \n" << Question;
         cout << "\n----------------------------------------------------------\n";
     }
+        
     static void ShowWrongAnswerMessage()
     {
-         cout << "\n" <<"Your answer is ❌ , try again: ";
+         cout << "\n" <<"Your answer is ❌, try again: ";
+     
     }
     static void ShowCorrectAnswerMessage()
     {
          cout << "\n" << "Right Answer ✅!!\n";
     }
+    static void ShowAttemptsAvaliable(int CurrAttempts)
+    {
+        const int MaxAttempts = 3;
+        cout << "\nYou have " << MaxAttempts - CurrAttempts << " attempt(s) avaliable.";
+    }
+
     
   
 };  

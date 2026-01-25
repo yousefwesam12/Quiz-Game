@@ -53,10 +53,6 @@ class clsMainMenueScreen : protected clsScreen
         //cout << "\n" << "Sports Questions Screen Will be here..\n";
         clsSportsQuestionsScreen::ShowSportsQuestionsScreen();
     }
-    static void _ShowExitScreen()
-    {
-        cout << "\n" << "Exit Screen Will be here..\n";
-    }
 
     static void _PerformMainMenueChoice(_enMainMenueChoices MainMenueChoice)
     {
@@ -94,8 +90,7 @@ class clsMainMenueScreen : protected clsScreen
 
             case eExit:
             ClearScreen();
-            _ShowExitScreen();
-            _GoBackToMainMenue();
+            cout << "\n" << "Good Bye 👋\n";
             break;
         }
     }
