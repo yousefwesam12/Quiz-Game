@@ -1,0 +1,5 @@
+What is the result of adding 2 to 5? #//# 1
+If 84 cookies are shared amongst 7 children, how many cookies does each child get? #//# 2
+A square with 2cm for each side, what is its area? #//# 3
+What is the result of 2^3? #//# 4
+What is the result of subtracting 2 from 3? #//# 5
