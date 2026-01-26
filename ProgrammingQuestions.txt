@@ -1,10 +1,10 @@
-What language is used to style web pages? #//#css
-What language is used to structure web pages? #//#html
-What language is used for web programming? #//#javascript
-Which language is known for data science? #//#python
-What symbol ends a statement in C++? #//#semicolon
-Which loop runs while a condition is true? #//#while
-What keyword defines a function in Python? #//#def
-Which symbol is used for comments in Python? #//#hash
-What operator is used to add numbers? #//#plus
-What keyword is used to create a variable in JavaScript? #//#let
+What language is used to style web pages?#//#Hint: Used for colors and layout#//#Choices: (A) HTML (B) CSS (C) JavaScript (D) Python#//#B
+What language is used to structure web pages?#//#Hint: Uses tags like <div>#//#Choices: (A) CSS (B) HTML (C) Python (D) C++#//#B
+What language is used for web programming?#//#Hint: Runs in the browser#//#Choices: (A) Java (B) Python (C) JavaScript (D) C++#//#C
+Which language is known for data science?#//#Hint: Very popular and easy to read#//#Choices: (A) Java (B) C++ (C) Python (D) PHP#//#C
+What symbol ends a statement in C++?#//#Hint: Looks like a dot at the bottom#//#Choices: (A) Colon (B) Comma (C) Semicolon (D) Dot#//#C
+Which loop runs while a condition is true?#//#Hint: Condition is checked before each iteration#//#Choices: (A) for (B) while (C) do-while (D) foreach#//#B
+What keyword defines a function in Python?#//#Hint: Written before the function name#//#Choices: (A) func (B) function (C) def (D) define#//#C
+Which symbol is used for comments in Python?#//#Hint: Starts a comment line#//#Choices: (A) // (B) <!-- --> (C) # (D) /* */#//#C
+What operator is used to add numbers?#//#Hint: Math addition symbol#//#Choices: (A) - (B) * (C) + (D) /#//#C
+What keyword is used to create a variable in JavaScript?#//#Hint: Introduced in ES6#//#Choices: (A) var (B) const (C) let (D) define#//#C

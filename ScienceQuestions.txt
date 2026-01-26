@@ -1,9 +1,9 @@
-What part of the body helps us think? #//#brain
-What star is closest to Earth? #//#sun
-What gas do we breathe? #//#oxygen
-What organ helps us breathe? #//#lungs
-What do plants need to make food? #//#sunlight
-What force pulls objects down? #//#gravity
-What animal lays eggs? #//#birds
-What state of matter is water? #//#liquid
-What do we call frozen water? #//#ice
+What part of the body helps us think?#//#Hint: Inside your head#//#Choices: (A) Heart (B) Brain (C) Lungs (D) Stomach#//#B
+What star is closest to Earth?#//#Hint: Gives light and heat#//#Choices: (A) Moon (B) Sun (C) Mars (D) Sirius#//#B
+What gas do we breathe?#//#Hint: Essential for life#//#Choices: (A) Carbon dioxide (B) Nitrogen (C) Oxygen (D) Hydrogen#//#C
+What organ helps us breathe?#//#Hint: Two organs in the chest#//#Choices: (A) Heart (B) Brain (C) Lungs (D) Kidneys#//#C
+What do plants need to make food?#//#Hint: Comes from the Sun#//#Choices: (A) Water (B) Soil (C) Sunlight (D) Wind#//#C
+What force pulls objects down?#//#Hint: Keeps us on the ground#//#Choices: (A) Magnetism (B) Gravity (C) Energy (D) Speed#//#B
+What animal lays eggs?#//#Hint: Has feathers#//#Choices: (A) Cat (B) Dog (C) Bird (D) Cow#//#C
+What state of matter is water?#//#Hint: You can drink it#//#Choices: (A) Solid (B) Gas (C) Liquid (D) Plasma#//#C
+What do we call frozen water?#//#Hint: Very cold#//#Choices: (A) Snow (B) Steam (C) Ice (D) Rain#//#C

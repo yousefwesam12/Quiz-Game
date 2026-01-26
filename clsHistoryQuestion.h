@@ -3,62 +3,85 @@
 #include "clsScreen.h"
 #include "clsQuestion.h"
 #include "clsInputValidate.h"
-#include "clsPlayer.h"
+#include "Global.h"
+#include "clsUtil.h"
 
 class clsHistoryQuestionsScreen : protected clsScreen
 {
-
-    static void GenerateHistoryQuestion()
+   static void _PlayRound(clsQuestion Question)
     {
-    vector <clsQuestion> vHistoryQuestions = clsQuestion::GetQuestionList("HistoryQuestions.txt");
-    int Counter = 1;
-
-    for (clsQuestion &Question : vHistoryQuestions)
-    {
-        clsPlayer Player("",0);
+        Player.ResetAttempts();
+        int Counter = 0;
+        ++Counter;
 
         DrawQuestionHeader(Question.GetQuestion(),Counter);
+        ShowChociesForTheQuestion(Question.GetQuestionChoices());
 
-        Player.SetPlayerAnswer(clsInputValidate::ReadString());
-
-        while(!Question.IsCorrectAnswer(clsString::LowerAllString(Player.GetPlayerAnswer())))
+        do
         {
+
+            Player.SetPlayerAnswer(clsInputValidate::ReadQuizChoices());
             Player.IncreasePlayerAttemptsByOne();
+
+            if(Question.IsCorrectAnswer(Player.GetPlayerAnswer()))
+            {
+                ShowCorrectAnswerMessage();
+                Player.IncreaseCorrectAnswersByOne();
+                break;
+            }
+    
+            ShowWrongAnswerMessage();
+
+            if(!Player.IsHintAsked() && Player.GetPlayerAttempts() == 1)
+            {
+                char answer = clsInputValidate::ReadChar("Do you want to see a hint? [Y/N]? ");
+
+                if(tolower(answer) == 'y')
+                {
+                    ShowHintForAQuestion(Question.GetQuestionHint());
+                    Player.SetHintAsked(true);
+                }
+                  
+            }
 
             if(Player.IsMaxAttempts())
             {
-                cout << "\nYour attempts has ended.";
-                cout << "\nThe answer was " << Question.GetQuestionAnswer() << endl;
+                ShowMaxAttemptsMessage(Question.GetQuestionAnswer());
+                Player.IncreaseWrongAnswersByOne();
                 break;
             }
 
             ShowAttemptsAvaliable(Player.GetPlayerAttempts());
-            ShowWrongAnswerMessage();
-            Player.SetPlayerAnswer(clsInputValidate::ReadString());
-        }
 
-        if(Question.IsCorrectAnswer(clsString::LowerAllString(Player.GetPlayerAnswer())))
-        {   
-            ShowCorrectAnswerMessage();
-        }
+        } while (true);
+        
         cout << "----------------------------------------------------------\n";
-
-        char answer = clsInputValidate::ReadChar("Do you want more questions? [Y/N]? ");
-     
-        if(tolower(answer)!='y')
-        {
-            return;
-        }
-
         Counter++;
+        return;
+    
+}
+
+    static void GenerateHistoryQuestion()
+    {
+        vector <clsQuestion> vHistoryQuestions = clsQuestion::GetQuestionList("HistoryQuestions.txt");
+   
+        char answer = 'n';
+        do
+        {
+            clsQuestion Question = vHistoryQuestions[clsUtil::RandomNumber(0,vHistoryQuestions.size()-1)];
+            _PlayRound(Question);
+            answer = clsInputValidate::ReadChar("Do you want more questions? [Y/N]? ");
+        
+        } while (answer == 'Y' || answer == 'y'); 
         
     }
-}
 
     public:
     static void ShowHistoryQuestionsScreen()
     {
         DrawScreenHeader("\tHistory Questions Screen");
         GenerateHistoryQuestion();
+        ShowFinalResultScreen(Player.GetCorrectAnswers(),Player.GetWrongAnswers(),Player.GetSkippedQuestions(),Player.GetOverallPerformance()); 
+        Player.ResetInfo();
     }
 };

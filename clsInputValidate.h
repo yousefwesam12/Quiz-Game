@@ -103,4 +103,22 @@ class clsInputValidate
         cin >> c;
         return c;
     }
+    static char ReadQuizChoices()
+    {
+    char c = ' ';
+    
+    do
+    {
+        cout << "\nEnter your choice (A/B/C/D): ";
+        cin >> c;
+        c = toupper(c);
+
+        if(c != 'A' && c != 'B' && c != 'C' && c != 'D')
+            cout << "Invalid choice. Try again.\n";
+
+    } while (c != 'A' && c != 'B' && c != 'C' && c != 'D');
+    
+    return c;
+    }
+
 };  

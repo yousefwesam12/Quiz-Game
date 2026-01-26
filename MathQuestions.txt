@@ -1,5 +1,10 @@
-What is the result of adding 2 to 5?#//#7
-If 84 cookies are shared amongst 7 children, how many cookies does each child get? #//#12
-A square with 2cm for each side, what is its area? #//#4
-What is the result of 2^3? #//#8
-What is the result of subtracting 2 from 3? #//#-1
+What is the result of adding 2 to 5?#//#Hint: Simple addition#//#Choices: (A) 6 (B) 7 (C) 8 (D) 9#//#B
+If 84 cookies are shared amongst 7 children, how many cookies does each child get?#//#Hint: Divide total by number of children#//#Choices: (A) 10 (B) 11 (C) 12 (D) 13#//#C
+A square with 2cm for each side, what is its area?#//#Hint: Area = side × side#//#Choices: (A) 2 (B) 3 (C) 4 (D) 5#//#C
+What is the result of 2^3?#//#Hint: Exponentiation, 2×2×2#//#Choices: (A) 6 (B) 7 (C) 8 (D) 9#//#C
+What is the result of subtracting 2 from 3?#//#Hint: Simple subtraction#//#Choices: (A) -1 (B) 0 (C) 1 (D) 2#//#A
+What is the result of 10 minus 4?#//#Hint: Simple subtraction#//#Choices: (A) 4 (B) 5 (C) 6 (D) 7#//#C
+If a rectangle has length 5cm and width 3cm, what is its area?#//#Hint: Area = length × width#//#Choices: (A) 15 (B) 8 (C) 10 (D) 12#//#A
+What is the result of 7 × 6?#//#Hint: Multiplication table#//#Choices: (A) 42 (B) 36 (C) 48 (D) 40#//#A
+If you have 20 candies and give 5 to a friend, how many do you have left?#//#Hint: Subtract#//#Choices: (A) 10 (B) 15 (C) 20 (D) 25#//#B
+What is the result of 9 ÷ 3?#//#Hint: Division#//#Choices: (A) 2 (B) 3 (C) 4 (D) 5#//#B

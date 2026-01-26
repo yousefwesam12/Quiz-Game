@@ -4,6 +4,7 @@
 #include <vector>
 #include "clsString.h"
 #include "clsUtil.h"
+#include <string>
 using namespace std;
 
 class clsQuestion
@@ -12,6 +13,8 @@ class clsQuestion
     string _Question;
     string _QuestionAnswer;
     bool   _IsCorrectAnswer;
+    string _QuestionHint;
+    string _QuestionChoices;
 
     static void _SwapTwoObjects(clsQuestion &Q1,clsQuestion &Q2)
     {
@@ -22,7 +25,7 @@ class clsQuestion
 
     static vector <clsQuestion> _ShuffleQuestionsList(vector <clsQuestion> &vQuestions)
     {
-        for(int i =0; i<vQuestions.size();i++)
+        for(size_t i =0; i<vQuestions.size();i++)
         {
             _SwapTwoObjects(vQuestions[clsUtil::RandomNumber(1,vQuestions.size())-1],vQuestions[clsUtil::RandomNumber(1,vQuestions.size())-1]);
         }
@@ -33,7 +36,7 @@ class clsQuestion
     {
         vector <string> vQuestion = clsString::Split(Line,Sep);
 
-        return clsQuestion(vQuestion[0],vQuestion[1]);
+        return clsQuestion(vQuestion[0],vQuestion[1],vQuestion[2],vQuestion[3]);
     }
 
     static vector <clsQuestion> _LoadQuestionsFromTheDatabase(string Filename, string Sep = "#//#")
@@ -59,10 +62,12 @@ class clsQuestion
     }
 
     public:
-    clsQuestion(string Question,string QuestionAnswer)
+    clsQuestion(string Question,string Hint,string QuestionChoices,string QuestionAnswer)
     {
         this->_Question = Question;
         this->_QuestionAnswer = QuestionAnswer;
+        this->_QuestionHint= Hint;
+        this->_QuestionChoices = QuestionChoices;
     }
     void SetQuestion(string Question)
     {
@@ -80,9 +85,19 @@ class clsQuestion
     {
         return this->_QuestionAnswer;
     }
-    bool IsCorrectAnswer(string Answer)
+    string GetQuestionHint()
     {
-        _IsCorrectAnswer = (Answer == _QuestionAnswer);
+        return this->_QuestionHint;
+    }
+    string GetQuestionChoices()
+    {
+        return this->_QuestionChoices;
+    }
+    
+    bool IsCorrectAnswer(char Answer)
+    {
+        _IsCorrectAnswer = (toupper(Answer) == toupper(_QuestionAnswer[0]));
+
         return _IsCorrectAnswer;
     }
 

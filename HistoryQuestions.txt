@@ -1,9 +1,9 @@
-Who was the first president of the USA? #//#washington
-Which country built the pyramids? #//#egypt
-Who discovered America? #//#columbus
-What is the name of the ancient Egyptian kings? #//#pharaohs
-Which country has the Great Wall? #//#china
-Who was a famous queen of Egypt? #//#cleopatra
-What people lived in ancient Egypt? #//#egyptians
-Which country did the Romans come from? #//#italy
-What is the name of the old city with pyramids? #//#giza
+Who was the first president of the USA?#//#Hint: One of the founding fathers#//#Choices: (A) Abraham Lincoln (B) George Washington (C) Thomas Jefferson (D) John Adams#//#B
+Which country built the pyramids?#//#Hint: Located in North Africa#//#Choices: (A) Greece (B) Mexico (C) Egypt (D) China#//#C
+Who discovered America?#//#Hint: An explorer from Europe#//#Choices: (A) Marco Polo (B) Christopher Columbus (C) Vasco da Gama (D) Magellan#//#B
+What is the name of the ancient Egyptian kings?#//#Hint: They ruled ancient Egypt#//#Choices: (A) Caesars (B) Emperors (C) Pharaohs (D) Sultans#//#C
+Which country has the Great Wall?#//#Hint: In East Asia#//#Choices: (A) India (B) China (C) Japan (D) Korea#//#B
+Who was a famous queen of Egypt?#//#Hint: She ruled with intelligence and power#//#Choices: (A) Nefertiti (B) Cleopatra (C) Hatshepsut (D) Isis#//#B
+What people lived in ancient Egypt?#//#Hint: Builders of pyramids#//#Choices: (A) Romans (B) Greeks (C) Egyptians (D) Persians#//#C
+Which country did the Romans come from?#//#Hint: Rome is its capital#//#Choices: (A) France (B) Spain (C) Italy (D) Greece#//#C
+What is the name of the old city with pyramids?#//#Hint: Near Cairo#//#Choices: (A) Luxor (B) Alexandria (C) Giza (D) Aswan#//#C

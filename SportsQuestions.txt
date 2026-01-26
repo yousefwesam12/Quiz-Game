@@ -1,7 +1,7 @@
-Which sport is known as "the king of sports? #//#soccer
-who is know as CR7?#//#ronaldo
-who won worldcup of the soccer at 2018? #//#france
-Which sport uses a puck? #//#hockey
-Which sport is played in a pool? #//#swimming
-Which sport has touchdowns? #//#football
-Which sport is played on a court with a net? #//#tennis
+Which sport is known as "the king of sports?"#//#Hint: The most popular sport in the world#//#Choices: (A) Basketball (B) Tennis (C) Soccer (D) Cricket#//#C
+Who is known as CR7?#//#Hint: A famous football player from Portugal#//#Choices: (A) Messi (B) Ronaldo (C) Neymar (D) Mbappe#//#B
+Who won the World Cup in 2018?#//#Hint: The tournament was held in Russia#//#Choices: (A) Brazil (B) Germany (C) France (D) Argentina#//#C
+Which sport uses a puck?#//#Hint: Played on ice#//#Choices: (A) Football (B) Hockey (C) Tennis (D) Basketball#//#B
+Which sport is played in a pool?#//#Hint: Athletes move through water#//#Choices: (A) Boxing (B) Running (C) Swimming (D) Cycling#//#C
+Which sport has touchdowns?#//#Hint: Very popular in the USA#//#Choices: (A) Soccer (B) Rugby (C) American Football (D) Hockey#//#C
+Which sport is played on a court with a net?#//#Hint: Uses a racket#//#Choices: (A) Volleyball (B) Tennis (C) Basketball (D) Badminton#//#B

@@ -31,17 +31,42 @@ class clsScreen
         
     static void ShowWrongAnswerMessage()
     {
-         cout << "\n" <<"Your answer is ❌, try again: ";
+         cout << "\n" <<"Your answer is NOT right , try again: ";
      
     }
     static void ShowCorrectAnswerMessage()
     {
-         cout << "\n" << "Right Answer ✅!!\n";
+         cout << "\n" << "Right Answer!!\n";
     }
     static void ShowAttemptsAvaliable(int CurrAttempts)
     {
         const int MaxAttempts = 3;
         cout << "\nYou have " << MaxAttempts - CurrAttempts << " attempt(s) avaliable.";
+
+    }
+    static void ShowFinalResultScreen(short CorrectAnswers,short WrongAnswers,short SkippedQuestions,string Performance)
+    {
+        cout << setw(38) << left << "" << "=======================================\n";
+        cout << setw(38) << left << "" << " \t\tF i n a l   R e s u l t\n";
+        cout << setw(38) << left << "" << "=======================================\n";
+        cout << setw(38) << left << "" << "\tCorrect Answers     : " << CorrectAnswers << endl;
+        cout << setw(38) << left << "" << "\tWrong Answers       : " << WrongAnswers << endl;
+        cout << setw(38) << left << "" << "\tSkipped Questions   : " << SkippedQuestions << endl;
+        cout << setw(38) << left << "" << "\tOverall Performance : " << Performance << endl;
+        cout << setw(38) << left << "" << "=======================================\n";
+    }
+    static void ShowMaxAttemptsMessage(string QuestionAnswer)
+    {
+        cout << "\nYour attempts has ended.";
+        cout << "\nThe answer was " << QuestionAnswer << endl;
+    }
+    static void ShowHintForAQuestion(string Hint)
+    {
+           cout << "\n" << Hint << endl;
+    }
+    static void ShowChociesForTheQuestion(string Choices)
+    {
+        cout << "\n" << Choices << endl;
     }
 
     
