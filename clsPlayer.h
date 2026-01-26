@@ -137,6 +137,7 @@ class clsPlayer
         _WrongAnswers = 0;
         _SkippedQuestions =0;
         _OverallPerformance = "";
+        this->HintAsked = false;
     }
     void ResetAttempts()
     {

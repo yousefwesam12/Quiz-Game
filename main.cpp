@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+    system("clear");
     clsMainMenueScreen::ShowMainQuizScreen();  
     
 }

@@ -13,8 +13,7 @@ class clsProgrammingQuestionsScreen : protected clsScreen
     static void _PlayRound(clsQuestion Question)
     {
         Player.ResetAttempts();
-        static int Counter = 0;
-        Counter++;
+        static int Counter = 1;
 
         DrawQuestionHeader(Question.GetQuestion(),Counter);
         ShowChociesForTheQuestion(Question.GetQuestionChoices());
